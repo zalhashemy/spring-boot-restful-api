@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.azl</groupId>
 	<artifactId>lara-restful-api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>war</packaging>
 	<name>lara-restful-api</name>
 	<description>Resful project for Spring Boot</description>
