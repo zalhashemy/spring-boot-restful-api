@@ -8,4 +8,6 @@ public interface VendorsService {
 	
 	public List<Vendors> findAllVendors();
 
+	public Vendors saveVendor(Vendors vendor);
+
 }

@@ -19,4 +19,10 @@ public class VendorsServiceImpl implements VendorsService {
 		return vendorsRepository.findAll();
 	}
 
+	@Override
+	public Vendors saveVendor(Vendors vendor) {
+		// TODO Auto-generated method stub
+		return vendorsRepository.save(vendor);
+	}
+
 }
