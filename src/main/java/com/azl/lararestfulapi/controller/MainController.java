@@ -4,9 +4,10 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.azl.lararestfulapi.model.Vendors;
@@ -30,6 +31,12 @@ public class MainController {
 	@PostMapping("vendors")
 	public Vendors createVendor(@RequestBody Vendors vendor ){
 		return vendorService.saveVendor(vendor);
+	}
+	
+	@PutMapping("vendors/{id}")
+	public Vendors updateVendor(@RequestBody Vendors vendor,@PathVariable Integer id ){
+		//Todo Check the vendor by Id then perform update.
+		return null;
 	}
 
 }
