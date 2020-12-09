@@ -1,6 +1,7 @@
 package com.azl.lararestfulapi.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,11 @@ public class VendorsServiceImpl implements VendorsService {
 	public Vendors saveVendor(Vendors vendor) {
 		// TODO Auto-generated method stub
 		return vendorsRepository.save(vendor);
+	}
+
+	@Override
+	public Optional<Vendors> findVendorById(Integer id) {
+		return vendorsRepository.findById(id);
 	}
 
 }

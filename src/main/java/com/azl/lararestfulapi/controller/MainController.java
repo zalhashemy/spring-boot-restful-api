@@ -35,8 +35,8 @@ public class MainController {
 	
 	@PutMapping("vendors/{id}")
 	public Vendors updateVendor(@RequestBody Vendors vendor,@PathVariable Integer id ){
-		//Todo Check the vendor by Id then perform update.
-		return null;
+		vendorService.findVendorById(id).orElseThrow(NullPointerException::new);
+		return vendorService.saveVendor(vendor);
 	}
 
 }
