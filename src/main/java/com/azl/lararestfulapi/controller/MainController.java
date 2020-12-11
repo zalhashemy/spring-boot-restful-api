@@ -3,6 +3,7 @@ package com.azl.lararestfulapi.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -37,6 +38,11 @@ public class MainController {
 	public Vendors updateVendor(@RequestBody Vendors vendor,@PathVariable Integer id ){
 		vendorService.findVendorById(id).orElseThrow(NullPointerException::new);
 		return vendorService.saveVendor(vendor);
+	}
+	
+	@DeleteMapping("vendors/{id}")
+	public Vendors deleteVendor(@PathVariable Integer id ){
+		return vendorService.deleteVendor(id);
 	}
 
 }
