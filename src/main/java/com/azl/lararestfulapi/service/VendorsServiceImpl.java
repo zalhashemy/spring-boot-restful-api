@@ -22,13 +22,17 @@ public class VendorsServiceImpl implements VendorsService {
 
 	@Override
 	public Vendors saveVendor(Vendors vendor) {
-		// TODO Auto-generated method stub
 		return vendorsRepository.save(vendor);
 	}
 
 	@Override
 	public Optional<Vendors> findVendorById(Integer id) {
 		return vendorsRepository.findById(id);
+	}
+
+	@Override
+	public void deleteVendor(Integer id) {
+		 vendorsRepository.deleteById(id);
 	}
 
 }
