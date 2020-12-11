@@ -13,4 +13,6 @@ public interface VendorsService {
 
 	public Optional<Vendors> findVendorById(Integer id);
 
+	public void deleteVendor(Integer id);
+
 }
