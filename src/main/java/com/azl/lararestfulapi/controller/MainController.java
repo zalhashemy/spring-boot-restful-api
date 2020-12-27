@@ -1,6 +1,7 @@
 package com.azl.lararestfulapi.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,6 +30,11 @@ public class MainController {
 	@GetMapping("vendors")
 	public List<Vendors> getAllVendors(){
 		return vendorService.findAllVendors();
+	}
+	
+	@GetMapping("vendors/{id}")
+	public Optional<Vendors> getVendorById(@PathVariable Integer id){
+		return vendorService.findVendorById(id);
 	}
 	
 	@PostMapping("vendors")
